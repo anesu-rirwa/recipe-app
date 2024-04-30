@@ -13,9 +13,10 @@ const SearchInput = ({searchRecipe, setSearchRecipe, setSearchQuery}) => {
                     value={searchRecipe}
                     onChange={(e) => setSearchRecipe(e.target.value)}
                     placeholder='chicken'
+                    _focus={{ borderColor: 'green.400' }}
                 />
                 
-                <Button bg={'blue.400'} rounded={'full'} color={'white'} flex={'1 0 auto'} _hover={{ bg: 'blue.500' }} _focus={{ bg: 'blue.500' }} onClick={() => setSearchQuery(searchRecipe)}>
+                <Button bg={'green.400'} rounded={'full'} color={'white'} flex={'1 0 auto'} _hover={{ bg: 'green.500' }} _focus={{ bg: 'green.500' }}  onClick={() => setSearchQuery(searchRecipe)}>
                     <BsSearch />
                 </Button>
             </HStack>

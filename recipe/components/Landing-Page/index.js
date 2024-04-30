@@ -1,10 +1,13 @@
 import React from 'react'
+import Hero from './hero'
 
-const index = () => {
+const LandingPage = () => {
   
   return (
-    <div>index</div>
+    <>
+      <Hero />
+    </>
   )
 }
 
-export default index
+export default LandingPage
