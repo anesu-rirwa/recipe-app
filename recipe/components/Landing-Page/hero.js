@@ -9,10 +9,7 @@ import {
   Text,
   Button,
   Icon,
-  Image as ChakraImage,
-  IconButton,
-  createIcon,
-  IconProps,
+  Show,
   useColorModeValue,
   HStack,
 } from '@chakra-ui/react'
@@ -24,13 +21,13 @@ import Link from 'next/link'
 export default function Hero() {
   
   return (
-    <Container maxW={'7xl'}>
+    <Container maxW={'100vw'}>
       <Stack
         align={'center'}
         spacing={{ base: 8, md: 10 }}
         py={{ base: 20, md: 28 }}
         direction={{ base: 'column', lg: 'row' }}>
-        <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+        <Stack spacing={{ base: 5, md: 10 }} width={{base: '80%', lg: '40%'}} ml={{lg: 10}}>
           <Heading
             lineHeight={1.1}
             fontWeight={600}
@@ -79,35 +76,35 @@ export default function Hero() {
         </Stack>
 
         <Flex
-          flex={1}
           justify={'center'}
           align={'center'}
           position={'relative'}
-          w={'full'}>
-          <Blob
-            w={'150%'}
-            h={'150%'}
-            position={'absolute'}
-            top={'-20%'}
-            left={0}
-            zIndex={-1}
-            color={useColorModeValue('green.100', 'green.400')}
-          />
+          w={'80%'}
+          >
+          <Show above='md'>
+            <Blob
+              w={'90%'}
+              h={'170%'}
+              position={'absolute'}
+              top={'-33%'}
+              left={10}
+              zIndex={-1}
+              color={useColorModeValue('green.100', 'green.400')}
+            />
+          </Show>
           <Box
             position={'relative'}
             height={{ base: '17.75rem', sm: '21.75rem', md: '23.75rem' }}
             rounded={'2xl'}
             boxShadow={'2xl'}
-            width={'full'}
+            width={{ base: '100%', md: '90%', lg: '80%'}} 
             overflow={'hidden'}>
 
             <Image
               alt={'Hero Image'}
-              fit={'cover'}
-              align={'center'}
-              width={'100%'}
-              height={'100%'}
               src={chefSvgPath}
+              layout={'fill'}
+              objectFit={'cover'}
             />
           </Box>
         </Flex>
@@ -119,7 +116,7 @@ export default function Hero() {
 const Blob = (props) => {
   return (
     <Icon
-      width={'100%'}
+      width={'80%'}
       viewBox="0 0 578 440"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
