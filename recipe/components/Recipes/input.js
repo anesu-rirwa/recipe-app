@@ -3,7 +3,8 @@ import { BsSearch } from 'react-icons/bs'
 import { Input, Button, Box, HStack } from '@chakra-ui/react'
 
 const SearchInput = ({searchRecipe, setSearchRecipe, setSearchQuery}) => {
-  return (
+  
+    return (
     <>
         <Box width={{base: '80%', md:'60%', lg: '40%'}}margin={'auto'}>
             <HStack>

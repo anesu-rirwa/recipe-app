@@ -2,7 +2,7 @@
 
 import React, {useState, useEffect} from 'react'
 import { getRecipes } from '@/utils/functions';
-import { Box, Heading, SimpleGrid, Grid, GridItem } from '@chakra-ui/react';
+import { Box, Heading, SimpleGrid, Text, useColorModeValue } from '@chakra-ui/react';
 import RecipeCard from '@/components/Recipes/card';
 import SearchInput from '@/components/Recipes/input';
 
@@ -23,7 +23,26 @@ const page = () => {
     return (
         <>
             <Box mt={10}>
-                <Heading textAlign={'center'}>Recipe Finder</Heading>
+                <Heading
+                    lineHeight={1.1}
+                    fontWeight={600}
+                    fontSize={{ base: '3xl', sm: '5xl', lg: '6xl' }} textAlign={'center'}>
+                        <Text
+                        as={'span'}
+                        position={'relative'}
+                        _after={{
+                            content: "''",
+                            width: 'full',
+                            height: '20%',
+                            position: 'absolute',
+                            bottom: 1,
+                            left: 0,
+                            bg: useColorModeValue('green.300', 'green.400'),
+                            zIndex: -1,
+                        }}>
+                            Discover Tasty Delights
+                        </Text>
+                </Heading>
             </Box>
 
             <Box mt={10}>

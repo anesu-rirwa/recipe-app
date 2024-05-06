@@ -31,7 +31,7 @@ export default function Hero() {
           <Heading
             lineHeight={1.1}
             fontWeight={600}
-            fontSize={{ base: '3xl', sm: '4xl', lg: '6xl' }}>
+            fontSize={{ base: '3xl', sm: '5xl', lg: '6xl' }}>
             <Text
               as={'span'}
               position={'relative'}
@@ -42,7 +42,7 @@ export default function Hero() {
                 position: 'absolute',
                 bottom: 1,
                 left: 0,
-                bg: 'green.400',
+                bg: useColorModeValue('green.300', 'green.400'),
                 zIndex: -1,
               }}>
               Chef's Table
@@ -50,11 +50,11 @@ export default function Hero() {
 
             <br />
             
-            <Text as={'span'} color={'green.400'} fontSize={'3xl'}>
+            <Text as={'span'} color={'green.400'} fontSize={{base: '2xl', sm: '3xl', lg: '3xl'}}>
                 Discover, Cook, Enjoy
             </Text>
           </Heading>
-          <Text color={'gray.500'}>
+          <Text color={'gray.600'}>
               Looking for culinary inspiration? Look no further! Chef's Table brings you a vast collection of mouthwatering recipes from around the globe. Whether you're a seasoned chef or just starting out, we have something for everyone.
           </Text>
 
@@ -89,7 +89,7 @@ export default function Hero() {
               top={'-33%'}
               left={10}
               zIndex={-1}
-              color={useColorModeValue('green.100', 'green.400')}
+              color={useColorModeValue('green.300', 'green.400')}
             />
           </Show>
           <Box
